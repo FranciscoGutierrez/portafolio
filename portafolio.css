@@ -1,0 +1,118 @@
+/*
+* Este es un comentario en CSS,
+* Todo lo bonito sucede aquí
+* ocupé colores material nivel 500: http://materialuicolors.co/
+* que son los colores primarios para un sitio Web.
+*/
+
+/*
+* Por lo regular los navegadores como Google Chrome por default agregan estilo
+* a las cosas como los elementos <H1>, <button>, etc..
+* A continuación, el * es un comodín que indica "todos los elementos HTML"
+* En este caso lo utilizamos para quitar el padding y el margin por default.
+*/
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+/* Aquí usamos Flex, para el layout. Flex es un conjunto de propiedades modernas
+para hacer sitios Web responsivos. */
+.button {
+	background: #bdc3c7;
+	width: 200px;
+	height: 40px;
+	border-radius: 5px;			/* Ponerles un borde ligeramente redondeado */
+	margin-left: 10px;			/* Esto evita que los botones estén pegados */
+	display:flex;
+	justify-content:center; /* Los elementos horizontales deben centrarse */
+	align-items: center;    /* Los elementos verticales deben centrarse */
+	cursor: pointer;        /* Cuando el cursor se ponga sobre un botón, que sea una manita */
+}
+/* La etiqueta Hover, es una etiqueta especial, permite cambiar el estilo cuando
+el mouse pasa por encima del elemento */
+.button:hover{
+	font-style: italic;
+}
+
+.topic {
+	width: 200px;
+	height: 200px;
+	background: #f1f1f1;
+	margin: 10px;
+	border-radius: 50%; /* 50% siempre será un circulo mientras width y height sean iguales */
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	font-size: 22px;
+}
+/* La etiqueta Hover */
+.topic:hover{
+	background: white;
+	cursor: pointer; /* Cuando el cursor se ponga sobre un botón, que sea una manita */
+}
+
+/* CSS atómico, un ejemplo de una librería que ocupa CSS atómico es Bootstrap
+CSS atómico indica que una clase indica el comportamiento de UNA sola propiedad. */
+
+.orange{background: #FF9800; }
+.indigo{background: #3F51B5; }
+.blue  {background: #2196F3; }
+.purple{background: #673AB7; }
+.green {background: #4CAF50; }
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-family: 'Poiret One', Arial,sans-serif;
+}
+
+/* Para que el diseño sea responsivo trata de usar porcentajes siempre que sea posible */
+.header {
+	display: flex;
+	/* Le indicamos a flex que el contenido del encabezado es una columna
+	Primero el título con el nombre "Berenice"
+	Después los botones.
+	*/
+	flex-direction: column;
+	width: 100%;    /* Le indicamos que ocupe todo el ancho de la página */
+	text-align: center;
+	padding-top: 10px;   /* Debemos agregar el espacio que previamente removimos con el comodín * */
+	padding-bottom: 10px;
+}
+
+.titulo{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.menu-container {
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;  /* Le indicamos a flex, que si los elementos ya no caben los agrupe */
+	justify-content: center;
+	min-width: 200px;
+	max-width: 600px;
+}
+
+.footer{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	color: white;
+	background: #D81B60;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.contacto {
+	width: 90%;
+	/* Contacto es un 90% mas pequeño y centrado para que deje un espacio del lado izq. */
+}
